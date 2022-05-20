@@ -1,6 +1,7 @@
 function setup() {
   createCanvas(400, 400);
   createGrid();
+  createCube();
 } //end setup
 
 function draw() {
@@ -10,4 +11,9 @@ function draw() {
       grid[j][i].draw();
     } //end i loop
   } //end j loop
+  
+  c.draw();
+  if(c.isClicked){
+    c.locate(mouseX-15, mouseY - 15);
+  }//end if
 } //end draw
