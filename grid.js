@@ -9,7 +9,7 @@ function createGrid() {
       grid[j][i].cornerRadius = 0;
       grid[j][i].width = 30;
       grid[j][i].height = 30;
-      grid[j][i].text = grid[j][i].x
+     
     } //end i loop
   } //end j loop
 } //end createGrid
