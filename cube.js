@@ -24,7 +24,10 @@ function findSpot(thisX, thisY){
       if(grid[j][i].x == thisX && grid[j][i].y == thisY){
         grid[j][i].color = "yellow";
         grid[j+1][i].color = "yellow";
+        grid[j][i+1].color = "yellow";
+        grid[j+1][i+1].color = "yellow";
       }// end if
     }//end i loop
   }//end j loop
-}
+  c.x = 500
+}//end find spot
