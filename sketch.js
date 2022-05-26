@@ -2,6 +2,7 @@ function setup() {
   createCanvas(400, 400);
   createGrid();
   createCube();
+  createBigCube();
 } //end setup
 
 function draw() {
@@ -13,7 +14,16 @@ function draw() {
   } //end j loop
   
   c.draw();
-  if(c.isClicked){
-    c.locate(mouseX-15, mouseY - 15);
-  }//end if
+  bc.draw();
+  checkIsClicked(c);
+  checkIsClicked(bc);
 } //end draw
+
+function checkIsClicked(thisTetramino){
+  /*this function will receive a shape, and 
+  make that shape follow the mouse
+  */
+  if(thisTetramino.isClicked){
+    thisTetramino.locate(mouseX -15 , mouseY-15);
+  }
+}
