@@ -26,6 +26,11 @@ function findSpotBigCube(thisX, thisY){
         grid[j+1][i].color = "yellow";
         grid[j][i+1].color = "yellow";
         grid[j+1][i+1].color = "yellow";
+        grid[j+1][i+2].color = "yellow";
+        grid[j+2][i+1].color = "yellow";
+        grid[j+2][i].color = "yellow";
+        grid[j+2][i+2].color = "yellow";
+        grid[j][i+2].color = "yellow";
       }// end if
     }//end i loop
   }//end j loop
