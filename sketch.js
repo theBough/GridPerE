@@ -3,6 +3,8 @@ function setup() {
   createGrid();
   createCube();
   createBigCube();
+  createEl();
+  
 } //end setup
 
 function draw() {
@@ -15,8 +17,12 @@ function draw() {
   
   c.draw();
   bc.draw();
+  l.draw()
+  l2.draw()
   checkIsClicked(c);
   checkIsClicked(bc);
+  checkIsClicked(l);
+  
 } //end draw
 
 function checkIsClicked(thisTetramino){
