@@ -13,7 +13,9 @@ function createEl(){
     l.isClicked = false;
     l.x = Math.floor(l.x / 30)*30
     l.y = Math.floor(l.y / 30)*30 
-    findSpotEL(l.x, l.y);
+    l2.x = l.x;
+    l2.y = l.y+30
+   
   } //end onrelease 
    l2 = new Clickable(20,380);
   l2.cornerRadius = 0;
@@ -27,7 +29,7 @@ function createEl(){
     l2.isClicked = false;
     l2.x = Math.floor(l2.x / 30)*30
     l2.y = Math.floor(l2.y / 30)*30 
-   
+    findSpotEL(l.x, l.y);
   } //end onrelease 
 }//end CreateEl
 
@@ -45,4 +47,5 @@ function findSpotEl(thisX, thisY){
     }//end i loop
   }//end j loop
   l.x = 500
+  l2.x = 500
 }//end find spot
