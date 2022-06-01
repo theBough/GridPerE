@@ -1,10 +1,9 @@
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(400, 600);
   createGrid();
   createCube();
   createBigCube();
   createEl();
-  
 } //end setup
 
 function draw() {
@@ -14,22 +13,27 @@ function draw() {
       grid[j][i].draw();
     } //end i loop
   } //end j loop
-  
+
   c.draw();
   bc.draw();
-  l.draw()
-  l2.draw()
+  l.draw();
+  l2.draw();
   checkIsClicked(c);
   checkIsClicked(bc);
   checkIsClicked(l);
-  
 } //end draw
 
-function checkIsClicked(thisTetramino){
+function checkIsClicked(thisTetramino) {
+  //console.log(secondTetramino)
   /*this function will receive a shape, and 
   make that shape follow the mouse
-  */
-  if(thisTetramino.isClicked){
-    thisTetramino.locate(mouseX -15 , mouseY-15);
-  }
-}
+ */
+  if (thisTetramino === l && thisTetramino.isClicked) {
+    l.locate(mouseX, mouseY);
+    l2.locate(mouseX, mouseY + 30);
+  } else {
+    if (thisTetramino.isClicked) {
+      thisTetramino.locate(mouseX - 15, mouseY - 15);
+    }//end if
+  }//end else
+}//end checkIsClicked
