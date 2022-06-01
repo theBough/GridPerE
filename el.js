@@ -15,7 +15,7 @@ function createEl(){
     l.y = Math.floor(l.y / 30)*30 
     l2.x = l.x;
     l2.y = l.y+30
-   
+   findSpotEl(l.x,l.y)
   } //end onrelease 
    l2 = new Clickable(20,380);
   l2.cornerRadius = 0;
@@ -41,8 +41,8 @@ function findSpotEl(thisX, thisY){
       if(grid[j][i].x == thisX && grid[j][i].y == thisY){
         grid[j][i].color = "yellow";
         grid[j+1][i].color = "yellow";
-        grid[j][i+1].color = "yellow";
         grid[j+1][i+1].color = "yellow";
+        
       }// end if
     }//end i loop
   }//end j loop
