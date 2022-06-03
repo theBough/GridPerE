@@ -1,10 +1,11 @@
+let position = 30;
 function setup() {
   createCanvas(400, 600);
   createGrid();
   createBigCube();
   createCube();
   createEl();
-  pickThree()
+  pickThree();
 } //end setup
 function draw() {
   background(220);
@@ -22,11 +23,21 @@ function draw() {
   checkIsClicked(bc);
   checkIsClicked(l);
 } //end draw
-function pickThree(){
+function pickThree() {
   let rndNum = Math.floor(random(3));
-  if(rndNum == 0){
-    c.x = 30;
-  }
+  for (i = 0; i < 3; i++) {
+    console.log(rndNum)
+    if (rndNum == 0) {
+      c.x = position;
+    }else if(rndNum == 1){
+      bc.x = position;
+    }else if(rndNum == 2){
+      l.x = position;
+      l2.x = position
+    }//end if block
+    position += 150
+    rndNum = Math.floor(random(3))
+  } //loop
 }
 function checkIsClicked(thisTetramino) {
   //console.log(secondTetramino)
@@ -39,6 +50,6 @@ function checkIsClicked(thisTetramino) {
   } else {
     if (thisTetramino.isClicked) {
       thisTetramino.locate(mouseX - 15, mouseY - 15);
-    }//end if
-  }//end else
-}//end checkIsClicked
+    } //end if
+  } //end else
+} //end checkIsClicked
