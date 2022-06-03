@@ -1,6 +1,6 @@
 let bc;
 function createBigCube(){
-  bc = new Clickable(20,350);
+  bc = new Clickable(600,350);
   bc.cornerRadius = 0;
   bc.text = ""
   bc.resize(90,90);
