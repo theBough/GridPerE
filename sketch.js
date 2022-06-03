@@ -1,11 +1,11 @@
 function setup() {
   createCanvas(400, 600);
   createGrid();
-  createCube();
   createBigCube();
+  createCube();
   createEl();
+  pickThree()
 } //end setup
-
 function draw() {
   background(220);
   for (j = 0; j < 10; j++) {
@@ -22,7 +22,12 @@ function draw() {
   checkIsClicked(bc);
   checkIsClicked(l);
 } //end draw
-
+function pickThree(){
+  let rndNum = Math.floor(random(3));
+  if(rndNum == 0){
+    c.x = 30;
+  }
+}
 function checkIsClicked(thisTetramino) {
   //console.log(secondTetramino)
   /*this function will receive a shape, and 
