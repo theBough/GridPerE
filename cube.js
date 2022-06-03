@@ -1,6 +1,6 @@
 let c;
 function createCube(){
-  c = new Clickable(20,350);
+  c = new Clickable(600,350);
   c.cornerRadius = 0;
   c.text = ""
   c.resize(60,60);
