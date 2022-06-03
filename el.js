@@ -1,7 +1,7 @@
 let l;
 let l2;
 function createEl(){
-  l = new Clickable(20,350);
+  l = new Clickable(600,350);
   l.cornerRadius = 0;
   l.text = ""
   l.resize(30,60);
@@ -17,7 +17,7 @@ function createEl(){
     l2.y = l.y+30
    findSpotEl(l.x,l.y)
   } //end onrelease 
-   l2 = new Clickable(20,380);
+   l2 = new Clickable(600,380);
   l2.cornerRadius = 0;
   l2.text = ""
   l2.resize(60,30);
