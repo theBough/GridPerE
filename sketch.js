@@ -1,5 +1,6 @@
 let position = 30;
 let pickedNums = []
+let numOfShapes = 3;
 
 function setup() {
   createCanvas(400, 600);
@@ -25,12 +26,24 @@ function draw() {
   checkIsClicked(bc);
   checkIsClicked(l);
 } //end draw
+function checkInGrid(thisShape){
+  /*this function gets called when the user lets go
+  of the shape.
+  The function will check if the shape is off the grid
+  */
+  if(thisShape.x < 30){
+    thisShape.x = 30;
+  }
+  if(thisShape.y < 30){
+    thisShape.y = 30;
+  }
+}
 function pickThree() {
-  let rndNum = Math.floor(random(3));
+  let rndNum = Math.floor(random(numOfShapes));
 
   for (i = 0; i < 3; i++) {
    while(pickedNums.includes(rndNum)){
-     rndNum = Math.floor(random(3));
+     rndNum = Math.floor(random(numOfShapes));
    }//end while loop
     pickedNums.push(rndNum);
     if (rndNum == 0) {
@@ -42,7 +55,7 @@ function pickThree() {
       l2.x = position;
     } //end if block
     position += 150;
-    rndNum = Math.floor(random(3));
+    rndNum = Math.floor(random(numOfShapes));
   } //loop
 }
 function checkIsClicked(thisTetramino) {
