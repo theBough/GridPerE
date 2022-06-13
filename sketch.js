@@ -1,4 +1,6 @@
 let position = 30;
+let pickedNums = []
+
 function setup() {
   createCanvas(400, 600);
   createGrid();
@@ -25,18 +27,22 @@ function draw() {
 } //end draw
 function pickThree() {
   let rndNum = Math.floor(random(3));
+
   for (i = 0; i < 3; i++) {
-    console.log(rndNum)
+   while(pickedNums.includes(rndNum)){
+     rndNum = Math.floor(random(3));
+   }//end while loop
+    pickedNums.push(rndNum);
     if (rndNum == 0) {
       c.x = position;
-    }else if(rndNum == 1){
+    } else if (rndNum == 1) {
       bc.x = position;
-    }else if(rndNum == 2){
+    } else if (rndNum == 2) {
       l.x = position;
-      l2.x = position
-    }//end if block
-    position += 150
-    rndNum = Math.floor(random(3))
+      l2.x = position;
+    } //end if block
+    position += 150;
+    rndNum = Math.floor(random(3));
   } //loop
 }
 function checkIsClicked(thisTetramino) {
