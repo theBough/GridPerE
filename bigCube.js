@@ -10,12 +10,12 @@ function createBigCube(){
   }//end onPress
   bc.onRelease = function(){
     bc.isClicked = false;
+    checkInGrid(bc)
     bc.x = Math.floor(bc.x / 30)*30
     bc.y = Math.floor(bc.y / 30)*30 
     findSpotBigCube(bc.x, bc.y);
   } //end onrelease 
 }//end CreateCube
-
 function findSpotBigCube(thisX, thisY){
   //this function will find out where the 
   //block got dropped
