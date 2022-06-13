@@ -32,7 +32,6 @@ function createEl(){
     findSpotEL(l.x, l.y);
   } //end onrelease 
 }//end CreateEl
-
 function findSpotEl(thisX, thisY){
   //this function will find out where the 
   //block got dropped
