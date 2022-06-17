@@ -16,6 +16,7 @@ function createEl(){
     l2.x = l.x;
     l2.y = l.y+30
    findSpotEl(l.x,l.y)
+    NewPickThree()
   } //end onrelease 
    l2 = new Clickable(600,380);
   l2.cornerRadius = 0;
