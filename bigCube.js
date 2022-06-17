@@ -16,9 +16,9 @@ function createBigCube() {
     bc.x = Math.floor(bc.x / 30) * 30;
     bc.y = Math.floor(bc.y / 30) * 30;
     findSpotBigCube(bc.x, bc.y);
+    NewPickThree()
   }; //end onrelease
 } //end CreateCube
-
 function checkCube() {
   /*this function gets called when the user lets go
   of the shape.
