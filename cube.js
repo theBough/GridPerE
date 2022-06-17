@@ -13,6 +13,7 @@ function createCube(){
     c.x = Math.floor(c.x / 30)*30
     c.y = Math.floor(c.y / 30)*30 
     findSpot(c.x, c.y);
+    NewPickThree()
   } //end onrelease 
 }//end CreateCube
 
